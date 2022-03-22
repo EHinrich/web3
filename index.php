@@ -45,7 +45,7 @@ try {
   //$stmt = $db->prepare("INSERT INTO application (name) SET name = ?");
   //$stmt -> execute($_POST['fio']);
   $stmt = $db->prepare("INSERT INTO application (name) VALUES (:name)");
-  $stmt -> bindParam(':name', $_POST['fio']);
+  $stmt -> execute($_POST['name'=>'fio']);
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
