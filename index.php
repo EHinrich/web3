@@ -44,7 +44,7 @@ $db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATT
 try {
   //$stmt = $db->prepare("INSERT INTO application (name) SET name = ?");
   //$stmt -> execute($_POST['fio']);
-  $stmt = $db->prepare("INSERT INTO application (name) VALUES (:name)");
+  $stmt = $db->prepare("INSERT INTO form (name) VALUES (:name)");
   $stmt -> bindParam(':name', $name);
   $name = $_POST['fio'];
   $stmt->execute();
