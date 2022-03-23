@@ -60,11 +60,11 @@ try {
   $stmt = $db->prepare("INSERT INTO form (name) VALUES (:name)");
   $stmt -> bindParam(':name', $name);
   $name = $_POST['name'];
-  $stmt->execute();
+  //$stmt->execute();
 
   $stmt = $db->prepare("INSERT INTO form (email) VALUES (:email)");
   $stmt -> bindParam(':email', $email);
-  $name = $_POST['email'];
+  $name = $_POST['name', 'email'];
   $stmt->execute();
 
   /*$stmt = $db->prepare("INSERT INTO form (year) VALUES (:year)");
