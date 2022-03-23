@@ -57,27 +57,29 @@ $db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATT
 
 // Подготовленный запрос. Не именованные метки.
 try {
-  $stmt = $db->prepare("INSERT INTO form (name, email, sex, number_of_limbs, superpowers) VALUES (:name, :email, :sex, :number_of_limbs, :superpowers)");
+  $stmt = $db->prepare("INSERT INTO form (name, email, sex, number_of_limbs, biography) VALUES (:name, :email, :sex, :number_of_limbs, :biography)");
+  
   $stmt -> bindParam(':name', $name);
   $stmt -> bindParam(':email', $email);
   //$stmt -> bindParam(':year', $year);
   $stmt -> bindParam(':sex', $sex);
   $stmt -> bindParam(':number_of_limbs', $number_of_limbs);
-  $stmt = $db->prepare("INSERT INTO form (superpowers) VALUES (:superpowers)");
+  //$stmt = $db->prepare("INSERT INTO form (superpowers) VALUES (:superpowers)");
+  $stmt -> bindParam(':biography', $biography);
+  
   $name = $_POST['name'];
   $email = $_POST['email'];
   //$year = $_POST['year'];
   $sex = $_POST['radio-group-1'];
   $number_of_limbs = $_POST['radio-group-2'];
-  $super = $_POST['super'];
+  //$super = $_POST['super'];
+  $biography = $_POST['bio'];
+  
   $stmt->execute();
 
-  /*$stmt = $db->prepare("INSERT INTO form (biography) VALUES (:biography)");
-  $stmt -> bindParam(':biography', $biography);
-  $name = $_POST['bio'];
-  $stmt->execute();
+  
 
-  $stmt = $db->prepare("INSERT INTO form (checkbox) VALUES (:checkbox)");
+  /*$stmt = $db->prepare("INSERT INTO form (checkbox) VALUES (:checkbox)");
   $stmt -> bindParam(':checkbox', $checkbox);
   $name = $_POST['check'];
   $stmt->execute();*/
