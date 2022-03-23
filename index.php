@@ -57,14 +57,15 @@ $db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATT
 
 // Подготовленный запрос. Не именованные метки.
 try {
-  $stmt = $db->prepare("INSERT INTO form (name, email, year, sex, number_of_limbs, biography, checkbox) VALUES (:name, :email, :year, :sex, :number_of_limbs, :biography, :checkbox)");
+  $stmt = $db->prepare("INSERT INTO form (name, email, year, sex, number_of_limbs, superpowers, biography, checkbox) 
+  VALUES (:name, :email, :year, :sex, :number_of_limbs, :superpowers, :biography, :checkbox)");
   
   $stmt -> bindParam(':name', $name);
   $stmt -> bindParam(':email', $email);
   $stmt -> bindParam(':year', $year);
   $stmt -> bindParam(':sex', $sex);
   $stmt -> bindParam(':number_of_limbs', $number_of_limbs);
-  //$stmt = $db->prepare("INSERT INTO form (superpowers) VALUES (:superpowers)");
+  $stmt = $db->prepare("INSERT INTO form (superpowers) VALUES (:superpowers)");
   $stmt -> bindParam(':biography', $biography);
   $stmt -> bindParam(':checkbox', $checkbox);
   
@@ -73,7 +74,7 @@ try {
   $year = $_POST['year'];
   $sex = $_POST['radio-group-1'];
   $number_of_limbs = $_POST['radio-group-2'];
-  //$super = $_POST['super'];
+  $super = $_POST['super'];
   $biography = $_POST['bio'];
   if (empty($_POST['check']))
     $checkbox = "No";
