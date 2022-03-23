@@ -105,7 +105,7 @@
               Чекбокс:<br />
               <label>
                   <input type="checkbox"
-                         name="check" />
+                         name="check" value="Yes"/>
                   С контрактом ознакомлен
               </label><br />
       
