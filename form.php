@@ -34,8 +34,8 @@
               <label>
                   Год рождения:<br />
                   <select id="year">
-                    <option value="Значение1">1900</option>
-                    <option value="Значение2">1901</option>
+                    <option value="1900">1900</option>
+                    <option value="1901">1901</option>
                     <option value="Значение3">1902</option>
                     <option value="Значение4">1903</option>
                     <option value="Значение5">1904</option>
@@ -54,34 +54,34 @@
               Пол:<br />
               <label>
                   <input type="radio" checked="checked"
-                         name="radio-group-1" value="Значение1" />
+                         name="radio-group-1" value="male" />
                   Муж
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-1" value="Значение2" />
+                         name="radio-group-1" value="female" />
                   Жен
               </label><br />
       
               Количество конечностей:<br />
               <label>
                   <input type="radio" checked="checked"
-                         name="radio-group-2" value="Значение1" />
+                         name="radio-group-2" value="1" />
                   1
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" value="Значение2" />
+                         name="radio-group-2" value="2" />
                   2
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" value="Значение2" />
+                         name="radio-group-2" value="3" />
                   3
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" value="Значение2" />
+                         name="radio-group-2" value="4" />
                   4
               </label><br />
       
