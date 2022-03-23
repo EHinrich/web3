@@ -61,7 +61,7 @@ try {
   $stmt -> bindParam(':name', $name);
   $stmt -> bindParam(':email', $email);
   $name = $_POST['name'];
-  $name = $_POST['email'];
+  $email = $_POST['email'];
   $stmt->execute();
 
   /*$stmt = $db->prepare("INSERT INTO form (year) VALUES (:year)");
