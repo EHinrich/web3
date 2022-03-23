@@ -93,7 +93,7 @@
               <label>
                   Сверхспособности:
                   <br />
-                  <select name="field-name-4[]"
+                  <select name="super"
                           multiple="multiple">
                       <option value="Значение1">Бессмертие</option>
                       <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
