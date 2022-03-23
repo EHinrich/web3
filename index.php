@@ -57,21 +57,18 @@ $db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATT
 
 // Подготовленный запрос. Не именованные метки.
 try {
-  $stmt = $db->prepare("INSERT INTO form (name, email, year) VALUES (:name, :email, :year)");
+  $stmt = $db->prepare("INSERT INTO form (name, email, sex) VALUES (:name, :email, :sex)");
   $stmt -> bindParam(':name', $name);
   $stmt -> bindParam(':email', $email);
-  $stmt -> bindParam(':year', $year);
+  //$stmt -> bindParam(':year', $year);
+  $stmt -> bindParam(':sex', $sex);
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $year = $_POST['year'];
+  //$year = $_POST['year'];
+  $sex = $_POST['radio-group-1'];
   $stmt->execute();
 
-  /*$stmt = $db->prepare("INSERT INTO form (sex) VALUES (:sex)");
-  $stmt -> bindParam(':sex', $sex);
-  $name = $_POST['radio-group-1'];
-  $stmt->execute();
-
-  $stmt = $db->prepare("INSERT INTO form (number_of_limbs) VALUES (:number_of_limbs)");
+  /*$stmt = $db->prepare("INSERT INTO form (number_of_limbs) VALUES (:number_of_limbs)");
   $stmt -> bindParam(':number_of_limbs', $number_of_limbs);
   $name = $_POST['radio-group-2'];
   $stmt->execute();
