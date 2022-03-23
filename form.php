@@ -33,7 +33,7 @@
       
               <label>
                   Год рождения:<br />
-                  <select id="year">
+                  <select name="year">
                     <option value="1900">1900</option>
                     <option value="1901">1901</option>
                     <option value="Значение3">1902</option>
