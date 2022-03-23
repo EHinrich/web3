@@ -59,10 +59,8 @@ $db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATT
 try {
   $stmt = $db->prepare("INSERT INTO form (name, email) VALUES (:name, :email)");
   $stmt -> bindParam(':name', $name);
-  $name = $_POST['name'];
-  //$stmt->execute();
-
   $stmt -> bindParam(':email', $email);
+  $name = $_POST['name'];
   $name = $_POST['email'];
   $stmt->execute();
 
