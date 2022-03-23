@@ -65,7 +65,7 @@ try {
   $stmt -> bindParam(':year', $year);
   $stmt -> bindParam(':sex', $sex);
   $stmt -> bindParam(':number_of_limbs', $number_of_limbs);
-  $stmt = $db->prepare("INSERT INTO form (superpowers) VALUES (:superpowers)");
+  $stmt -> bindParam(':superpowers', $superpowers);
   $stmt -> bindParam(':biography', $biography);
   $stmt -> bindParam(':checkbox', $checkbox);
   
