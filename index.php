@@ -57,11 +57,11 @@ $db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATT
 
 // Подготовленный запрос. Не именованные метки.
 try {
-  $stmt = $db->prepare("INSERT INTO form (name, email, sex, number_of_limbs, biography, checkbox) VALUES (:name, :email, :sex, :number_of_limbs, :biography, :checkbox)");
+  $stmt = $db->prepare("INSERT INTO form (name, email, year, sex, number_of_limbs, biography, checkbox) VALUES (:name, :email, :year, :sex, :number_of_limbs, :biography, :checkbox)");
   
   $stmt -> bindParam(':name', $name);
   $stmt -> bindParam(':email', $email);
-  //$stmt -> bindParam(':year', $year);
+  $stmt -> bindParam(':year', $year);
   $stmt -> bindParam(':sex', $sex);
   $stmt -> bindParam(':number_of_limbs', $number_of_limbs);
   //$stmt = $db->prepare("INSERT INTO form (superpowers) VALUES (:superpowers)");
@@ -70,7 +70,7 @@ try {
   
   $name = $_POST['name'];
   $email = $_POST['email'];
-  //$year = $_POST['year'];
+  $year = $_POST['year'];
   $sex = $_POST['radio-group-1'];
   $number_of_limbs = $_POST['radio-group-2'];
   //$super = $_POST['super'];
