@@ -57,7 +57,7 @@ $db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATT
 
 // Подготовленный запрос. Не именованные метки.
 try {
-  $stmt = $db->prepare("INSERT INTO form (name, email, sex, number_of_limbs, biography) VALUES (:name, :email, :sex, :number_of_limbs, :biography)");
+  $stmt = $db->prepare("INSERT INTO form (name, email, sex, number_of_limbs, biography, checkbox) VALUES (:name, :email, :sex, :number_of_limbs, :biography, :checkbox)");
   
   $stmt -> bindParam(':name', $name);
   $stmt -> bindParam(':email', $email);
@@ -66,6 +66,7 @@ try {
   $stmt -> bindParam(':number_of_limbs', $number_of_limbs);
   //$stmt = $db->prepare("INSERT INTO form (superpowers) VALUES (:superpowers)");
   $stmt -> bindParam(':biography', $biography);
+  $stmt -> bindParam(':checkbox', $checkbox);
   
   $name = $_POST['name'];
   $email = $_POST['email'];
@@ -74,15 +75,9 @@ try {
   $number_of_limbs = $_POST['radio-group-2'];
   //$super = $_POST['super'];
   $biography = $_POST['bio'];
+  $checkbox = $_POST['check'];
   
   $stmt->execute();
-
-  
-
-  /*$stmt = $db->prepare("INSERT INTO form (checkbox) VALUES (:checkbox)");
-  $stmt -> bindParam(':checkbox', $checkbox);
-  $name = $_POST['check'];
-  $stmt->execute();*/
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
