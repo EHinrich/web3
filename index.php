@@ -62,12 +62,12 @@ try {
   $name = $_POST['name'];
   $stmt->execute();
 
-  /*$stmt = $db->prepare("INSERT INTO form (email) VALUES (:email)");
+  $stmt = $db->prepare("INSERT INTO form (email) VALUES (:email)");
   $stmt -> bindParam(':email', $email);
   $name = $_POST['email'];
   $stmt->execute();
 
-  $stmt = $db->prepare("INSERT INTO form (year) VALUES (:year)");
+  /*$stmt = $db->prepare("INSERT INTO form (year) VALUES (:year)");
   $stmt -> bindParam(':year', $year);
   $name = $_POST['year'];
   $stmt->execute();
