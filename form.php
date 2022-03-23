@@ -88,7 +88,7 @@
               <label>
                   Сверхспособности:
                   <br />
-                  <select name="super[]"
+                  <select name="super"
                       multiple="multiple">
                       <option value="Immortality">Бессмертие</option>
                       <option value="Passing through walls">Прохождение сквозь стены</option>
