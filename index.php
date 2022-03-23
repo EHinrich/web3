@@ -57,19 +57,16 @@ $db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATT
 
 // Подготовленный запрос. Не именованные метки.
 try {
-  $stmt = $db->prepare("INSERT INTO form (name, email) VALUES (:name, :email)");
+  $stmt = $db->prepare("INSERT INTO form (name, email, year) VALUES (:name, :email, :year)");
   $stmt -> bindParam(':name', $name);
   $stmt -> bindParam(':email', $email);
+  $stmt -> bindParam(':year', $year);
   $name = $_POST['name'];
   $email = $_POST['email'];
+  $year = $_POST['year'];
   $stmt->execute();
 
-  /*$stmt = $db->prepare("INSERT INTO form (year) VALUES (:year)");
-  $stmt -> bindParam(':year', $year);
-  $name = $_POST['year'];
-  $stmt->execute();
-
-  $stmt = $db->prepare("INSERT INTO form (sex) VALUES (:sex)");
+  /*$stmt = $db->prepare("INSERT INTO form (sex) VALUES (:sex)");
   $stmt -> bindParam(':sex', $sex);
   $name = $_POST['radio-group-1'];
   $stmt->execute();
