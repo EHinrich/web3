@@ -62,7 +62,7 @@ try {
   $name = $_POST['fio'];
   $stmt->execute();
 
-  $stmt = $db->prepare("INSERT INTO form (email) VALUES (:email)");
+  /*$stmt = $db->prepare("INSERT INTO form (email) VALUES (:email)");
   $stmt -> bindParam(':email', $email);
   $name = $_POST['email'];
   $stmt->execute();
@@ -95,7 +95,7 @@ try {
   $stmt = $db->prepare("INSERT INTO form (checkbox) VALUES (:checkbox)");
   $stmt -> bindParam(':checkbox', $checkbox);
   $name = $_POST['check'];
-  $stmt->execute();
+  $stmt->execute();*/
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
