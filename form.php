@@ -90,9 +90,9 @@
                   <br />
                   <select name="super"
                       multiple="multiple">
-                      <option value="Значение1">Бессмертие</option>
-                      <option value="Значение2">Прохождение сквозь стены</option>
-                      <option value="Значение3">Левитвция</option>
+                      <option value="Immortality">Бессмертие</option>
+                      <option value="Passing through walls">Прохождение сквозь стены</option>
+                      <option value="Levitation">Левитвция</option>
                   </select>
               </label><br />
       
