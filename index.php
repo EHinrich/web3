@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 // Проверяем ошибки.
 $errors = FALSE;
 if (empty($_POST['name'])) {
-  print('Заполните имя.<br/>');
+  echo "<script> alert('Заполните имя.');</script>";
   $errors = TRUE;
 }
 
