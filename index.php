@@ -74,7 +74,7 @@ try {
   $year = $_POST['year'];
   $sex = $_POST['radio-group-1'];
   $number_of_limbs = $_POST['radio-group-2'];
-  $superpowers = $_POST['super'];
+  $superpowers = $_POST['super[]'];
   $biography = $_POST['bio'];
   if (empty($_POST['check']))
     $checkbox = "No";
