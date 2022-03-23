@@ -30,11 +30,6 @@ if (empty($_POST['email'])) {
   $errors = TRUE;
 }
 
-if (empty($_POST['year'])) {
-  print('Заполните год.<br/>');
-  $errors = TRUE;
-}
-
 if (empty($_POST['super'])) {
   print('Выберете суперспособности.<br/>');
   $errors = TRUE;
