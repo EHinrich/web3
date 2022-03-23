@@ -43,7 +43,7 @@
                     <option value="Значение7">1906</option>
                     <option value="Значение8">1907</option>
                     <option value="Значение9">1908</option>
-                    <option value="Значение10">1909</option><option value="Значение1">1900</option>
+                    <option value="Значение10">1909</option>
                     <option value="Значение11">1910</option>
                     <option value="Значение12">1911</option>
                     <option value="Значение13">1912</option>
@@ -89,10 +89,10 @@
                   Сверхспособности:
                   <br />
                   <select name="super"
-                          multiple="multiple">
+                      multiple="multiple">
                       <option value="Значение1">Бессмертие</option>
-                      <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
-                      <option value="Значение3" selected="selected">Левитвция</option>
+                      <option value="Значение2">Прохождение сквозь стены</option>
+                      <option value="Значение3">Левитвция</option>
                   </select>
               </label><br />
       
@@ -104,7 +104,7 @@
       
               Чекбокс:<br />
               <label>
-                  <input type="checkbox" checked="checked"
+                  <input type="checkbox"
                          name="check" />
                   С контрактом ознакомлен
               </label><br />
