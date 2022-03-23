@@ -75,7 +75,10 @@ try {
   $number_of_limbs = $_POST['radio-group-2'];
   //$super = $_POST['super'];
   $biography = $_POST['bio'];
-  $checkbox = $_POST['check'];
+  if (empty($_POST['check']))
+    $checkbox = "No";
+  else
+    $checkbox = $_POST['check'];
   
   $stmt->execute();
 }
