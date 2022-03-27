@@ -34,10 +34,15 @@
               <label>
                   Год рождения:<br />
                   <select name="year"></select>
-                   <script>for (let year = 1920; year <= 2020; year++) {
-                              let options = document.createElement("OPTION");
-                              document.getElementById("year").appendChild(options).innerHTML = year;
-                            }
+                   <script>function InitDatePickers() {
+                            $(".datepicker").datepicker({
+                                changeMonth: true,
+                                changeYear: true,
+                                showButtonPanel: true,
+                                maxDate: '@maxDate',
+                                minDate: '@minDate'
+                            });
+                        }
                        }</script>
               </label><br />
       
