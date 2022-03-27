@@ -34,12 +34,12 @@
               <label>
                   Год рождения:<br />
                   <select name="year">
-                   for(var i = 0; i <= 100; i++) {
+                   <script>for(var i = 0; i <= 100; i++) {
                         var option = document.createElement('option');
                         option.textContent = year-i;
                         yearSelect.appendChild(option);
                          }
-                    }
+                       }</script>
                   </select>
               </label><br />
       
