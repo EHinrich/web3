@@ -31,20 +31,17 @@
                          type="email" />
               </label><br />
       
-              <label>
+              <!--<label>-->
                   Год рождения:<br />
                   <select name="year"></select>
-                   <script>function InitDatePickers() {
-                            $(".datepicker").datepicker({
-                                changeMonth: true,
-                                changeYear: true,
-                                showButtonPanel: true,
-                                maxDate: '@maxDate',
-                                minDate: '@minDate'
+                   <script>$(document).ready(function() {
+                            $("#date").datepicker({
+                                changeYear:true,
+                                yearRange: "2005:2015"
                             });
-                        }
-                       }</script>
-              </label><br />
+                        });
+                       </script>
+              <!--</label>--><br />
       
               Пол:<br />
               <label>
