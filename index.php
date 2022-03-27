@@ -25,8 +25,19 @@ if (empty($_POST['name'])) {
   $errors = TRUE;
 }
 
+if !(preg_match("/^[a-zа-яё]+$/i", $_POST['name'])){
+	echo "<script> alert('Вводите только буквы.');</script>";
+$errors = TRUE;
+}
+
+
 if (empty($_POST['email'])) {
   print('Заполните email.<br/>');
+  $errors = TRUE;
+}
+
+if !(preg_match("/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/", $_POST['email'])){
+  echo "<script> alert('Невозможный email.');</script>";
   $errors = TRUE;
 }
 
