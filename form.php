@@ -33,14 +33,12 @@
       
               <label>
                   Год рождения:<br />
-                  <select name="year">
-                   <script>for(var i = 0; i <= 100; i++) {
-                        var option = document.createElement('option');
-                        option.textContent = year-i;
-                        yearSelect.appendChild(option);
-                         }
+                  <select name="year"></select>
+                   <script>for (let year = 1920; year <= 2020; year++) {
+                              let options = document.createElement("OPTION");
+                              document.getElementById("year").appendChild(options).innerHTML = year;
+                            }
                        }</script>
-                  </select>
               </label><br />
       
               Пол:<br />
