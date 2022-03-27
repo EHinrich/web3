@@ -26,7 +26,7 @@ if (empty($_POST['name'])) {
 }
 
 if (!preg_match("/^[a-zа-яё]+$/i", $_POST['name'])){
-	echo "<script> alert('Вводите только буквы в поле "Имя".');</script>";
+	echo "<script> alert('Вводите только буквы в поле Имя.');</script>";
 $errors = TRUE;
 }
 
