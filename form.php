@@ -34,20 +34,12 @@
               <label>
                   Год рождения:<br />
                   <select name="year">
-                    <option value="1900">1900</option>
-                    <option value="1901">1901</option>
-                    <option value="Значение3">1902</option>
-                    <option value="Значение4">1903</option>
-                    <option value="Значение5">1904</option>
-                    <option value="Значение6">1905</option>
-                    <option value="Значение7">1906</option>
-                    <option value="Значение8">1907</option>
-                    <option value="Значение9">1908</option>
-                    <option value="Значение10">1909</option>
-                    <option value="Значение11">1910</option>
-                    <option value="Значение12">1911</option>
-                    <option value="Значение13">1912</option>
-                    <option value="Значение14">1913</option>
+                   for(var i = 0; i <= 100; i++) {
+                        var option = document.createElement('option');
+                        option.textContent = year-i;
+                        yearSelect.appendChild(option);
+                         }
+                    }
                   </select>
               </label><br />
       
